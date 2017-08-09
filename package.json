@@ -14,10 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com:Dmytr1K/project-lvl1-s120.git"
+    "url": "git+https://github.com/Dmytr1K/project-lvl1-s120.git"
   },
   "author": "Dmytro Korzhov",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dmytr1K/project-lvl1-s120/issues"
+  },
+  "homepage": "https://github.com/Dmytr1K/project-lvl1-s120#readme",
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
