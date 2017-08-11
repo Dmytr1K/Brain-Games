@@ -12,12 +12,12 @@ console.log('Welcome to the Brain Games!');
 console.log('Answer "yes" if number even otherwise answer "no".');
 const userName = readlineSync.question('\nMay I have your name? ');
 
-export const getRandomInt = (min, max) =>
+const getRandomInt = (min, max) =>
   Math.floor(Math.random() * (max - min)) + min;
 
-export const isEven = number => number % 2 === 0;
+const isEven = number => number % 2 === 0;
 
-export const humanLogic = (boolean) => {
+const humanLogic = (boolean) => {
   if (boolean) {
     return 'yes';
   }
