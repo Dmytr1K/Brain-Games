@@ -1,17 +1,16 @@
 #!/usr/bin/env node
 
-import { welcome, getAnsver, getUserName } from '..';
+import readlineSync from 'readline-sync';
 
-const gameTerms = 'Answer "yes" if number even otherwise answer "no".';
 const minNumber = 0;
 const maxNumber = 100;
 const maxAttempts = 3;
 
 let attempt;
 
-welcome();
-console.log(gameTerms);
-const userName = getUserName();
+console.log('Welcome to the Brain Games!');
+console.log('Answer "yes" if number even otherwise answer "no".');
+const userName = readlineSync.question('\nMay I have your name? ');
 
 export const getRandomInt = (min, max) =>
   Math.floor(Math.random() * (max - min)) + min;
@@ -29,7 +28,7 @@ for (attempt = 1; attempt <= maxAttempts; attempt += 1) {
   const randomNumber = getRandomInt(minNumber, maxNumber);
 
   console.log(`Question: ${randomNumber}`);
-  const answer = getAnsver('Your answer: ');
+  const answer = readlineSync.question('Your answer: ');
   const question = humanLogic(isEven(randomNumber));
 
   if (question === answer) {
@@ -41,6 +40,6 @@ for (attempt = 1; attempt <= maxAttempts; attempt += 1) {
   }
 }
 
-if (attempt === 3) {
+if (attempt > 3) {
   console.log(`Congratulations, ${userName}!`);
 }
