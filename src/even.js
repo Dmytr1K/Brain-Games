@@ -9,7 +9,7 @@ const getRandomInt = (min, max) =>
 
 const isEven = number => number % 2 === 0;
 
-const humanLogic = (boolean) => {
+const convert = (boolean) => {
   if (boolean) {
     return 'yes';
   }
@@ -25,7 +25,7 @@ const passStage = (remainingStages, userName) => {
   const randomNumber = getRandomInt(minNumber, maxNumber);
   console.log(`Question: ${randomNumber}`);
 
-  const correctAnswer = humanLogic(isEven(randomNumber));
+  const correctAnswer = convert(isEven(randomNumber));
 
   const userAnswer = readlineSync.question('Your answer: ');
   if (userAnswer === correctAnswer) {
