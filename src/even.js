@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const minNumber = 0;
 const maxNumber = 100;
-const maxAttempts = 3;
+const numberOfStages = 3;
 
 const getRandomInt = (min, max) =>
   Math.floor(Math.random() * (max - min)) + min;
@@ -21,8 +21,8 @@ export default () => {
   console.log('Answer "yes" if number even otherwise answer "no".');
   const userName = readlineSync.question('\nMay I have your name? ');
 
-  let attempt;
-  for (attempt = 1; attempt <= maxAttempts; attempt += 1) {
+  let stage;
+  for (stage = 1; stage <= numberOfStages; stage += 1) {
     const randomNumber = getRandomInt(minNumber, maxNumber);
 
     console.log(`Question: ${randomNumber}`);
@@ -37,7 +37,7 @@ export default () => {
       break;
     }
   }
-  if (attempt > 3) {
+  if (stage > 3) {
     console.log(`Congratulations, ${userName}!`);
   }
 };
