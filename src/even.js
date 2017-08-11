@@ -16,28 +16,32 @@ const humanLogic = (boolean) => {
   return 'no';
 };
 
+const passStage = (remainingStagesNumber, userName) => {
+  if (remainingStagesNumber === 0) {
+    console.log(`Congratulations, ${userName}!`);
+    return 0;
+  }
+
+  const randomNumber = getRandomInt(minNumber, maxNumber);
+  console.log(`Question: ${randomNumber}`);
+
+  const question = humanLogic(isEven(randomNumber));
+
+  const answer = readlineSync.question('Your answer: ');
+  if (question === answer) {
+    console.log('Correct!');
+  } else {
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${question}'.`);
+    console.log(`Let's try again, ${userName}!`);
+    return 1;
+  }
+
+  return passStage(remainingStagesNumber - 1, userName);
+};
+
 export default () => {
   console.log('Welcome to the Brain Games!');
   console.log('Answer "yes" if number even otherwise answer "no".');
-  const userName = readlineSync.question('\nMay I have your name? ');
-
-  let stage;
-  for (stage = 1; stage <= numberOfStages; stage += 1) {
-    const randomNumber = getRandomInt(minNumber, maxNumber);
-
-    console.log(`Question: ${randomNumber}`);
-    const answer = readlineSync.question('Your answer: ');
-    const question = humanLogic(isEven(randomNumber));
-
-    if (question === answer) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${question}'.`);
-      console.log(`Let's try again, ${userName}!`);
-      break;
-    }
-  }
-  if (stage > 3) {
-    console.log(`Congratulations, ${userName}!`);
-  }
+  const name = readlineSync.question('\nMay I have your name? ');
+  passStage(numberOfStages, name);
 };
