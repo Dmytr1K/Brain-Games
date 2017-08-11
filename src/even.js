@@ -16,10 +16,9 @@ const convert = (boolean) => {
   return 'no';
 };
 
-const passStage = (remainingStages, userName) => {
+const passStage = (remainingStages) => {
   if (remainingStages === 0) {
-    console.log(`Congratulations, ${userName}!`);
-    return 0;
+    return true;
   }
 
   const randomNumber = getRandomInt(minNumber, maxNumber);
@@ -32,16 +31,19 @@ const passStage = (remainingStages, userName) => {
     console.log('Correct!');
   } else {
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-    console.log(`Let's try again, ${userName}!`);
-    return 1;
+    return false;
   }
 
-  return passStage(remainingStages - 1, userName);
+  return passStage(remainingStages - 1);
 };
 
 export default () => {
   console.log('Welcome to the Brain Games!');
   console.log('Answer "yes" if number even otherwise answer "no".');
-  const name = readlineSync.question('\nMay I have your name? ');
-  passStage(stagesCount, name);
+  const userName = readlineSync.question('\nMay I have your name? ');
+  if (passStage(stagesCount)) {
+    console.log(`Congratulations, ${userName}!`);
+  } else {
+    console.log(`Let's try again, ${userName}!`);
+  }
 };
