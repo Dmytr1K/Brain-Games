@@ -41,6 +41,7 @@ export default () => {
   console.log('Welcome to the Brain Games!');
   console.log('Answer "yes" if number even otherwise answer "no".');
   const userName = readlineSync.question('\nMay I have your name? ');
+  console.log(`Hello, ${userName}!\n`);
   if (passStage(stagesCount)) {
     console.log(`Congratulations, ${userName}!`);
   } else {
