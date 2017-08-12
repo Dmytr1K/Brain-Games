@@ -25,7 +25,8 @@
   },
   "homepage": "https://github.com/Dmytr1K/project-lvl1-s120#readme",
   "dependencies": {
-    "readline-sync": "*"
+    "readline-sync": "^1.4.7",
+    "hexlet-pairs": "^1.0.5"
   },
   "devDependencies": {
     "babel-cli": "*",
