@@ -1,4 +1,4 @@
-import { cons } from 'hexlet-pairs';
+import { cons } from 'hexlet-pairs'; // eslint-disable-line
 import play, { getRandomInt } from '..';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';

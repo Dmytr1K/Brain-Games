@@ -1,5 +1,5 @@
-import readlineSync from 'readline-sync';
-import { car, cdr } from 'hexlet-pairs';
+import readlineSync from 'readline-sync'; // eslint-disable-line
+import { car, cdr } from 'hexlet-pairs'; // eslint-disable-line
 
 const stagesCount = 3;
 

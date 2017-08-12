@@ -1,4 +1,4 @@
-import { cons } from 'hexlet-pairs';
+import { cons } from 'hexlet-pairs'; // eslint-disable-line
 import play, { getRandomInt } from '..';
 
 const description = 'What is the result of the expression?';
