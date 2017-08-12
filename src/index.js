@@ -3,13 +3,6 @@ import { car, cdr } from 'hexlet-pairs'; // eslint-disable-line
 
 const stagesCount = 3;
 
-const minRandomNumber = 0;
-const maxRandomNumber = 100;
-// The maximum and the minimum is inclusive
-export const getRandomInt = (min = minRandomNumber, max = maxRandomNumber) =>
-  Math.floor(Math.random() * ((Math.floor(max) - Math.ceil(min)) + 1)) +
-  Math.ceil(min);
-
 const passStage = (remainingStages, setGameData) => {
   if (remainingStages === 0) { return true; }
 

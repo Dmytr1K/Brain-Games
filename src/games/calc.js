@@ -1,5 +1,7 @@
 import { cons } from 'hexlet-pairs'; // eslint-disable-line
-import play, { getRandomInt } from '..';
+import play from '..';
+import { getRandomInt } from '../util';
+
 
 const description = 'What is the result of the expression?';
 
