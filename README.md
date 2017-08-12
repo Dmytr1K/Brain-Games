@@ -4,4 +4,4 @@
 
 A set of mini-games launched from the console
 
-[*Hexlet*](https://ru.hexlet.io)
+[*Hexlet - Проекты, сертификация, стажировка*](https://ru.hexlet.io/projects)

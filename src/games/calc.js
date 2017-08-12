@@ -1,7 +1,7 @@
 import { cons } from 'hexlet-pairs';
 import play from '..';
 
-const description = 'Answer "yes" if number even otherwise answer "no".';
+const description = 'What is the result of the expression?';
 
 const minNumber = 0;
 const maxNumber = 99;
@@ -19,22 +19,21 @@ const setGameData = () => {
   const operatorNumber = getRandomInt(1, 3);
   switch (operatorNumber) {
     case 1:
-      question = `Question: ${operands1} + ${operands2}`;
+      question = `${operands1} + ${operands2}`;
       correctAnswer = `${operands1 + operands2}`;
       break;
     case 2:
-      question = `Question: ${operands1} - ${operands2}`;
+      question = `${operands1} - ${operands2}`;
       correctAnswer = `${operands1 - operands2}`;
       break;
     case 3:
-      question = `Question: ${operands1} * ${operands2}`;
+      question = `${operands1} * ${operands2}`;
       correctAnswer = `${operands1 * operands2}`;
       break;
     // no default
   }
 
-  const gameSet = cons(question, correctAnswer);
-  return cons(description, gameSet);
+  return cons(description, cons(question, correctAnswer));
 };
 
 export default () => play(setGameData);
