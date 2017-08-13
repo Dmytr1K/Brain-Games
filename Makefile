@@ -19,6 +19,9 @@ even:
 gcd:
 	npm run babel-node -- src/bin/brain-gcd.js
 
+prime:
+	npm run babel-node -- src/bin/brain-prime.js
+
 progression:
 	npm run babel-node -- src/bin/brain-progression.js
 
