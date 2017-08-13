@@ -1,7 +1,6 @@
 import { cons } from 'hexlet-pairs';
+import getRandomInt from '../get-random-int';
 import play from '..';
-import { getRandomInt } from '../util';
-
 
 const description = 'What is the result of the expression?';
 
