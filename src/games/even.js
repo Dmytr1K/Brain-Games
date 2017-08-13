@@ -1,4 +1,4 @@
-import { cons } from 'hexlet-pairs'; // eslint-disable-line
+import { cons } from 'hexlet-pairs';
 import play from '..';
 import { getRandomInt } from '../util';
 

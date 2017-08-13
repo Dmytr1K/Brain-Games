@@ -1,10 +1,12 @@
-import readlineSync from 'readline-sync'; // eslint-disable-line
-import { car, cdr } from 'hexlet-pairs'; // eslint-disable-line
+import readlineSync from 'readline-sync';
+import { car, cdr } from 'hexlet-pairs';
 
 const stagesCount = 3;
 
 const passStage = (remainingStages, setGameData) => {
-  if (remainingStages === 0) { return true; }
+  if (remainingStages === 0) {
+    return true;
+  }
 
   const stageData = setGameData();
   const question = car(stageData);
