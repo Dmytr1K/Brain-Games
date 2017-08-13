@@ -1,5 +1,5 @@
 import { cons } from 'hexlet-pairs';
-import getRandomInt from '../get-random-int';
+import getRandomInt from '../util';
 import play from '..';
 
 const description = 'What number is missing in this progression?';
