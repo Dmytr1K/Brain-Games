@@ -7,6 +7,9 @@ lint:
 start:
 	npm run babel-node -- src/bin/brain-games.js
 
+balance:
+	npm run babel-node -- src/bin/brain-balance.js
+
 calc:
 	npm run babel-node -- src/bin/brain-calc.js
 
