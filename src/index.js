@@ -40,9 +40,3 @@ export default (description, setGameData) => {
     console.log(`Let's try again, ${userName}!`);
   }
 };
-
-export const hello = () => {
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('\nMay I have your name? ');
-  console.log(`Hello, ${userName}!\n`);
-};
