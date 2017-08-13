@@ -6,7 +6,7 @@ const stagesCount = 3;
 const passStage = (remainingStages, setGameData) => {
   if (remainingStages === 0) { return true; }
 
-  const stageData = cdr(setGameData());
+  const stageData = setGameData();
   const question = car(stageData);
   const correctAnswer = cdr(stageData);
 
@@ -24,13 +24,10 @@ const passStage = (remainingStages, setGameData) => {
   return passStage(remainingStages - 1, setGameData);
 };
 
-export default (setGameData) => {
+export default (description, setGameData) => {
   console.log('Welcome to the Brain Games!');
 
-  if (setGameData) {
-    const description = car(setGameData());
-    console.log(description);
-  }
+  console.log(description);
 
   const userName = readlineSync.question('\nMay I have your name? ');
   console.log(`Hello, ${userName}!\n`);

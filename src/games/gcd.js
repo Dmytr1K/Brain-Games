@@ -11,7 +11,7 @@ const setGameData = () => {
   const question = `${number1} ${number2}`;
   const correctAnswer = `${gcd(number1, number2)}`;
 
-  return cons(description, cons(question, correctAnswer));
+  return cons(question, correctAnswer);
 };
 
-export default () => play(setGameData);
+export default () => play(description, setGameData);

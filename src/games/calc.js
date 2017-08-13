@@ -28,7 +28,7 @@ const setGameData = () => {
     // no default
   }
 
-  return cons(description, cons(question, correctAnswer));
+  return cons(question, correctAnswer);
 };
 
-export default () => play(setGameData);
+export default () => play(description, setGameData);
