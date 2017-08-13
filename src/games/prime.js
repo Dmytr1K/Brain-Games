@@ -8,7 +8,6 @@ const isPrime = (number) => {
   if (number < 2) {
     return false;
   }
-
   const iter = (divider) => {
     if (divider === 1) {
       return true;
@@ -18,14 +17,13 @@ const isPrime = (number) => {
     }
     return iter(divider - 1);
   };
-
   return iter(number - 1);
 };
 
 const setGameData = () => {
   const question = getRandomInt();
-
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
+
   return cons(question, correctAnswer);
 };
 
