@@ -19,5 +19,8 @@ even:
 gcd:
 	npm run babel-node -- src/bin/brain-gcd.js
 
+progression:
+	npm run babel-node -- src/bin/brain-progression.js
+
 publish:
 	npm publish
