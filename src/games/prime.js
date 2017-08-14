@@ -9,15 +9,15 @@ const isPrime = (number) => {
     return false;
   }
   const iter = (divider) => {
-    if (divider === 1) {
+    if (divider >= Math.sqrt(number)) {
       return true;
     }
     if (number % divider === 0) {
       return false;
     }
-    return iter(divider - 1);
+    return iter(divider + 1);
   };
-  return iter(number - 1);
+  return iter(2);
 };
 
 const setGameData = () => {
